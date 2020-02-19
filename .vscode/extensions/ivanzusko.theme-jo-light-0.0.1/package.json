@@ -1,0 +1,33 @@
+{
+	"name": "theme-jo-light",
+	"displayName": "Jo's Light Theme",
+	"description": "Soft Light theme. Very easy for eyes and brains :)",
+	"version": "0.0.1",
+	"publisher": "ivanzusko",
+	"icon": "images/screenshot.png",
+	"galleryBanner": {
+		"color": "#FFF6DC",
+		"theme": "light"
+	},
+	"engines": {
+		"vscode": "*"
+	},
+	"categories": [
+		"Themes"
+	],
+	"repositoryURL": "",
+	"contributes": {
+		"themes": [
+			{
+				"label": "Jo Light",
+				"uiTheme": "vs",
+				"path": "./themes/Jo-light.tmTheme"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "54c40226-303d-4553-89ed-b41a6a53ef8b",
+		"publisherId": "48613b1e-7778-4a11-b943-52137b11a368",
+		"publisherDisplayName": "Ivan Zusko"
+	}
+}

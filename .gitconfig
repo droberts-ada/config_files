@@ -1,0 +1,21 @@
+[user]
+	name = Dan Roberts
+	email = dan@adadevelopersacademy.org
+[color]
+	diff = auto
+	branch = auto
+	stauts = auto
+	status = auto
+[alias]
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+[core]
+[core]
+	ignorecase = false
+[push]
+	default = current
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"

@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/ssd/svn/isilon.git/onefs/isilon/test/pynfs/lib/nfs3'
+let g:netrw_dirhist_2='/ssd/svn/isilon.git/onefs/isilon/test/pynfsnew'
+let g:netrw_dirhist_3='/ssd/svn/isilon.git/onefs/isilon/test/pynfsnew/nfs4.0'
+let g:netrw_dirhist_4='/ssd/svn/isilon.git/onefs/isilon/test/pynfsnew/nfs4.0/lib'
+let g:netrw_dirhist_5='/ssd/svn/isilon.git/onefs/isilon/test/pynfsnew/nfs4.0/lib/servertests'
+let g:netrw_dirhist_6='/Users/droberts/Ada'
+let g:netrw_dirhist_7='/Users/droberts/Ada/Scratch/epiceditor-test/epiceditor/themes/base'

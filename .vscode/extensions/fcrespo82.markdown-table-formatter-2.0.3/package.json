@@ -1,0 +1,193 @@
+{
+	"name": "markdown-table-formatter",
+	"displayName": "Markdown Table Formatter",
+	"description": "A simple markdown plugin to format tables.",
+	"homepage": "https://github.com/fcrespo82/vscode-markdown-table-formatter",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fcrespo82/vscode-markdown-table-formatter"
+	},
+	"bugs": {
+		"url": "https://github.com/fcrespo82/vscode-markdown-table-formatter/issues"
+	},
+	"license": "MIT",
+	"version": "2.0.3",
+	"publisher": "fcrespo82",
+	"icon": "resources/icon.png",
+	"keywords": [
+		"markdown",
+		"table",
+		"formatter"
+	],
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./dist/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "markdown-table-formatter.enableForCurrentScope",
+				"category": "Markdown Table Formatter",
+				"title": "Enable for current language"
+			},
+			{
+				"command": "markdown-table-formatter.sortTable",
+				"category": "Markdown Table Formatter",
+				"title": "Sort table by header"
+			},
+			{
+				"command": "markdown-table-formatter.toggleDebug",
+				"category": "Markdown Table Formatter",
+				"title": "Toggle debug decorations"
+			},
+			{
+				"command": "markdown-table-formatter.moveColumnRight",
+				"category": "Markdown Table Formatter",
+				"title": "Move column right"
+			},
+			{
+				"command": "markdown-table-formatter.moveColumnLeft",
+				"category": "Markdown Table Formatter",
+				"title": "Move column left"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "markdown-table-formatter.enableForCurrentScope",
+				"key": "alt+shift+e",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "markdown-table-formatter.moveColumnRight",
+				"key": "alt+shift+right",
+				"mac": "cmd+alt+right",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "markdown-table-formatter.moveColumnLeft",
+				"key": "alt+shift+left",
+				"mac": "cmd+alt+left",
+				"when": "editorTextFocus"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Markdown Table Formatter configurations",
+			"properties": {
+				"markdown-table-formatter.enable": {
+					"title": "Enable Markdown Table Formatter",
+					"description": "Enable or disable Markdown Table Formatter",
+					"type": "boolean",
+					"default": true
+				},
+				"markdown-table-formatter.enableSort": {
+					"title": "Enable Markdown Table Formatter Sort Lenses",
+					"description": "Enable or disable Markdown Table Formatter Sort Lenses",
+					"type": "boolean",
+					"default": true
+				},
+				"markdown-table-formatter.spacePadding": {
+					"title": "Space padding",
+					"description": "How many spaces between left and right of each column content",
+					"type": "integer",
+					"default": 1
+				},
+				"markdown-table-formatter.keepFirstAndLastPipes": {
+					"title": "Keep first and last pipes",
+					"description": "Keep first and last pipes \"|\" in table formatting. Tables are easier to format when pipes are kept",
+					"type": "boolean",
+					"default": true
+				},
+				"markdown-table-formatter.defaultTableJustification": {
+					"title": "Default table justification",
+					"description": "Defines the default justification for tables that have only a \"-\" or no colon on the formatting line",
+					"type": "string",
+					"enum": [
+						"Left",
+						"Center",
+						"Right"
+					],
+					"default": "Left"
+				},
+				"markdown-table-formatter.removeColonsIfSameAsDefault": {
+					"title": "Remove colons if Justification is the same as default",
+					"description": "Remove colons from the format line if the justification is the same as default",
+					"type": "boolean",
+					"default": false
+				},
+				"markdown-table-formatter.markdownGrammarScopes": {
+					"title": "Grammar scopes to enable Markdown Table Formatter",
+					"description": "File language grammar that will be considered Markdown by this package (comma-separated). \nRun \"Markdown Table Formatter: Enable For Current Scope\" command to add current editor grammar to this setting.",
+					"type": "array",
+					"items": {
+						"type": "string"
+					},
+					"default": [
+						"markdown"
+					]
+				},
+				"markdown-table-formatter.globalColumnSizes": {
+					"title": "Keep columns sizes the same",
+					"description": "Calculates the column sizes based on all tables on the document.",
+					"type": "string",
+					"enum": [
+						"Disabled",
+						"Same Column Size",
+						"Same Table Size"
+					],
+					"default": "Disabled"
+				},
+				"markdown-table-formatter.delimiterRowPadding": {
+					"title": "Keep columns sizes the same",
+					"description": "Calculates the column sizes based on all tables on the document.",
+					"type": "string",
+					"enum": [
+						"None",
+						"Follow Space Padding",
+						"Single Space Always",
+						"Alignment Marker"
+					],
+					"default": "None"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"webpack": "webpack --mode development",
+		"webpack-dev": "webpack --mode development --watch",
+		"test-compile": "tsc -p ./",
+		"lint": "tslint -p ./"
+	},
+	"dependencies": {
+		"md5": "^2.2.1",
+		"wcwidth": "1.*",
+		"xregexp": "^4.2.4"
+	},
+	"devDependencies": {
+		"@types/glob": "7.1.1",
+		"@types/mocha": "^2.2.42",
+		"@types/node": "^7.10.9",
+		"@types/vscode": "^1.34.0",
+		"@types/wcwidth": "^1.0.0",
+		"@types/xregexp": "^3.0.30",
+		"mocha": "^6.2.2",
+		"ts-loader": "^6.2.1",
+		"tslint": "^5.20.1",
+		"typescript": "^3.7.2",
+		"vscode-test": "^1.2.2",
+		"webpack": "^4.41.2",
+		"webpack-cli": "^3.3.10"
+	},
+	"__metadata": {
+		"id": "db9e305f-2d5a-44a5-97f7-91d4f2199a81",
+		"publisherId": "59f372a7-86a5-4352-ba0d-b8ac1e60f927",
+		"publisherDisplayName": "Fernando Crespo"
+	}
+}

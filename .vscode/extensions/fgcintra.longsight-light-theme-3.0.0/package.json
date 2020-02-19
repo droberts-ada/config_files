@@ -1,0 +1,49 @@
+{
+	"name": "longsight-light-theme",
+	"displayName": "Longsight Light Theme",
+	"description": "A theme pimarily designed for use on data projectors, and pretty usable on regular screens as well",
+	"version": "3.0.0",
+	"publisher": "fgcintra",
+	"license": "MIT",
+	"galleryBanner": {
+		"color": "#FF8A65",
+		"theme": "light"
+	},
+	"engines": {
+		"vscode": "^1.21.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"longsight",
+		"theme",
+		"light",
+		"longsight light",
+		"data projector"
+	],
+	"icon": "images/icon.png",
+	"contributes": {
+		"themes": [
+			{
+				"label": "Longsight Light Theme",
+				"uiTheme": "vs",
+				"path": "./themes/Longsight Light Theme-color-theme.json"
+			}
+		]
+	},
+	"bugs": {
+		"url": "https://github.com/fgcintra/vscode-longsight-light-theme/issues",
+		"email": "fausto@fgcintra.pro.br"
+	},
+	"homepage": "https://github.com/fgcintra/vscode-longsight-light-theme",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/fgcintra/vscode-longsight-light-theme"
+	},
+	"__metadata": {
+		"id": "7791af1c-eb9b-4c16-baec-1aa2fa3ddac0",
+		"publisherId": "35d67f5a-91a5-49ef-a5f8-06375bdbfe05",
+		"publisherDisplayName": "Fausto G. Cintra"
+	}
+}
