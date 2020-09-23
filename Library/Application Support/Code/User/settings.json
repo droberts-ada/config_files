@@ -1,0 +1,111 @@
+{
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.wordWrap": "on",
+  "window.zoomLevel": 0,
+  "editor.fontSize": 17,
+  "workbench.colorTheme": "GitHub Sharp",
+  "workbench.activityBar.visible": true,
+  "explorer.confirmDragAndDrop": false,
+  "editor.wrappingIndent": "indent",
+  "editor.hover.delay": 600,
+  "editor.acceptSuggestionOnEnter": "off",
+  "ruby.format": "rufo",
+  "editor.minimap.showSlider": "always",
+  "markdown-table-formatter.removeColonsIfSameAsDefault": true,
+  "markdown-table-formatter.markdownGrammarScopes": ["markdown", "ruby"],
+  "markdown-table-formatter.keepFirstAndLastPipes": false,
+  "markdown-table-formatter.limitLastColumnPadding": true,
+  "terminal.integrated.fontSize": 15,
+  "search.showLineNumbers": true,
+  "workbench.colorCustomizations": {
+    "[Atom One Light]": {
+      "editor.selectionBackground": "#7dd5ff",
+      "editorLineNumber.foreground": "#666"
+    }
+  },
+  "explorer.confirmDelete": false,
+  "editor.minimap.enabled": false,
+  "[ruby]": {
+    "editor.defaultFormatter": "mbessey.vscode-rufo"
+  },
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "configurations": [
+    {
+      "name": "Debug Open File",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "program": "${file}"
+    },
+    {
+      "name": "All Spec Files",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",
+      "program": "/usr/bin/rspec",
+      "args": [
+        "--require", "spec_helper",
+        "--require", "rails_helper",
+        "--format", "documentation"
+      ]
+    },
+    {
+      "name": "Debug Open Test File",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",           
+      "program": "${file}",
+      "includes": ["test", "lib"]
+    },
+    {
+      "name": "Debug Selected Test",
+      "type": "Ruby",
+      "request": "launch",
+      "cwd": "${workspaceRoot}",           
+      "program": "${file}",
+      "includes": ["test", "lib"],
+      "args": [
+        "-n",
+        "${selectedText}"
+      ]
+    }
+  ],
+  "bracketPairColorizer.consecutivePairColors": [
+    "()",
+    "[]",
+    "{}",
+    [
+      "Goldenrod",
+      "Orchid",
+      "#005cc5"
+    ],
+    "Red"
+  ],
+  "[rust]": {
+    "editor.tabSize": 4
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "theme-by-language.themes": {
+    "*": "GitHub Sharp",
+    "markdown": "Atom One Light"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.autoReveal": false,
+  "go.formatTool": "goimports"
+//   "files.associations": {
+//     "*.erb": "erb"
+//   }
+}
